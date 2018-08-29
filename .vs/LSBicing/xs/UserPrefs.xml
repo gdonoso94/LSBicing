@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{D79B2EC5-118F-4918-B98B-6C9DCD410229}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LSBicing/StringFormatter.cs">
+    <Files>
+      <File FileName="LSBicing/Program.cs" Line="17" Column="54" />
+      <File FileName="LSBicing/StringFormatter.cs" Line="20" Column="1" />
+      <File FileName="LSBicing/Geocoding.cs" Line="21" Column="55" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.LSBicing PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

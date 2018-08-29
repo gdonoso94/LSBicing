@@ -1,0 +1,11 @@
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/obj/Debug/netcoreapp2.1/LSBicing.csprojResolveAssemblyReference.cache
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/obj/Debug/netcoreapp2.1/LSBicing.csproj.CoreCompileInputs.cache
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/obj/Debug/netcoreapp2.1/LSBicing.AssemblyInfoInputs.cache
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/obj/Debug/netcoreapp2.1/LSBicing.AssemblyInfo.cs
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/bin/Debug/netcoreapp2.1/LSBicing.deps.json
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/bin/Debug/netcoreapp2.1/LSBicing.runtimeconfig.json
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/bin/Debug/netcoreapp2.1/LSBicing.runtimeconfig.dev.json
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/bin/Debug/netcoreapp2.1/LSBicing.dll
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/bin/Debug/netcoreapp2.1/LSBicing.pdb
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/obj/Debug/netcoreapp2.1/LSBicing.dll
+/Users/gonzalodonosogonzalez/Projects/LSBicing/LSBicing/obj/Debug/netcoreapp2.1/LSBicing.pdb
