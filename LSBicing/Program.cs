@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
 
 namespace LSBicing
@@ -33,6 +34,7 @@ namespace LSBicing
             Console.WriteLine("Longitude " + geocode.Location["Lon"]);
             geocode.OpenMap();
 
+           
         }
     }
 }

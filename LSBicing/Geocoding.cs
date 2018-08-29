@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -9,7 +10,7 @@ namespace LSBicing
     class Geocoding
     {
         public string baseUrl = @"https://maps.googleapis.com/maps/api/geocode/json?";
-        public string apiKey = ;
+        public string apiKey = File.ReadAllText("../apikey.txt").ToString();
         public string result;
         public JObject jsonResult;
         public string address;
@@ -83,19 +84,17 @@ namespace LSBicing
         {
             if ((string)GetJsonResult()["status"] == "OK")
             {
-                if (!GetJsonResult()["results"][0].isEmpty())
-                {
-                    return (string)GetJsonResult()["results"][0]["formatted_address"];
-                }
-                else
-                {
-                    return "No results for that address."; 
-                }
+                 return (string)GetJsonResult()["results"][0]["formatted_address"];
             }
-            else
+            else if ((string)GetJsonResult()["status"] == "ZERO_RESULTS")
             {
-                return "Bad Request";
+                return "No results for that address.";
             }
+            else 
+            {
+                return "Bad Request."; 
+            }
+
         }
 
         public void GetLocationFromJson()
