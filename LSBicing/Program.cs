@@ -7,6 +7,7 @@ namespace LSBicing
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             //string foo = "Esto es una prueba"; 
@@ -23,17 +24,23 @@ namespace LSBicing
             //    string result = client.DownloadString(@"https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAm5Sagiy095tGRNnoM710E0MUafqhj1k0");
             //    Console.WriteLine(result);
             //}
-            Console.WriteLine("Insert your address: ");
-            var myAddress = Console.ReadLine();
-            var geocode = new Geocoding(myAddress);
-            geocode.GetJsonString();
-            geocode.ParseJson();
-            Console.WriteLine(geocode.GetFormattedAddress());
-            geocode.GetLocationFromJson();
-            Console.WriteLine("Latitude " + geocode.Location["Lat"]);
-            Console.WriteLine("Longitude " + geocode.Location["Lon"]);
-            geocode.OpenMap();
 
+            var openUpMenu = new Menu();
+            var selector = openUpMenu.GetChoice();
+
+            if (selector == 1)
+            {
+                Console.WriteLine("Insert your address: ");
+                var myAddress = Console.ReadLine();
+                var geocode = new Geocoding(myAddress);
+                geocode.GetJsonString();
+                geocode.ParseJson();
+                Console.WriteLine(geocode.GetFormattedAddress());
+                geocode.GetLocationFromJson();
+                Console.WriteLine("Latitude " + geocode.Location["Lat"]);
+                Console.WriteLine("Longitude " + geocode.Location["Lon"]);
+                geocode.OpenMap();
+            }
            
         }
     }
