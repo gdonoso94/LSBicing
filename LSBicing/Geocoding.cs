@@ -115,9 +115,10 @@ namespace LSBicing
         }
 
         public void OpenMap(){
-            Process.Start("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", string.Format("https://www.google.com/maps/search/{0},{1}",
-                                                                                                        this.Location["Lat"], this.Location["Lon"]));
+            Process.Start("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", string.Format("https://www.google.com/maps/place/{0}",
+                                                                                                        GetFormattedAddress().Replace(" ", "+")));
             // https://www.google.com/maps/search/40.3820398,+-3.1984832?sa=X&ved=2ahUKEwjC6o6V15LdAhUhzlkKHVaeCmUQ8gEwAHoECAQQAQ
+            //https://www.google.com/maps/place/address
 
         }
 
