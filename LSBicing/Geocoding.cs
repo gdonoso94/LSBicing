@@ -15,6 +15,7 @@ namespace LSBicing
         public JObject jsonResult;
         public string address;
         public Dictionary<string, string> Location { get; private set; }
+        public bool isGoodRequest = true;
 
         public Geocoding(string str)
         {
@@ -88,6 +89,7 @@ namespace LSBicing
             }
             else if ((string)GetJsonResult()["status"] == "ZERO_RESULTS")
             {
+                this.isGoodRequest = false;
                 return "No results for that address.";
             }
             else 
@@ -110,13 +112,20 @@ namespace LSBicing
             }
             else
             {
-                throw new HttpListenerException(1, "There is a problem with your request. Review API key.");
+                return;
             }
         }
 
         public void OpenMap(){
-            Process.Start("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", string.Format("https://www.google.com/maps/place/{0}",
-                                                                                                        GetFormattedAddress().Replace(" ", "+")));
+            if ((string)GetJsonResult()["status"] == "OK")
+            {
+                Process.Start("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", string.Format("https://www.google.com/maps/place/{0}",
+                                                                                                            GetFormattedAddress().Replace(" ", "+")));
+            }
+            else
+            { 
+                return; 
+            }
             // https://www.google.com/maps/search/40.3820398,+-3.1984832?sa=X&ved=2ahUKEwjC6o6V15LdAhUhzlkKHVaeCmUQ8gEwAHoECAQQAQ
             //https://www.google.com/maps/place/address
 

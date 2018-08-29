@@ -13,6 +13,7 @@ namespace LSBicing
             System.Console.WriteLine("2. Closer bike station");
             System.Console.WriteLine("3. Route creation");
             System.Console.WriteLine("4. Bike station visualization");
+            System.Console.WriteLine("\n");
             var choice_ = Console.ReadLine();
             SetChoice(choice_);
         }

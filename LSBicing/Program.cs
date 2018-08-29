@@ -27,7 +27,7 @@ namespace LSBicing
 
             var openUpMenu = new Menu();
             var selector = openUpMenu.GetChoice();
-
+            Console.Clear();
             if (selector == 1)
             {
                 Console.WriteLine("Insert your address: ");
@@ -37,9 +37,13 @@ namespace LSBicing
                 geocode.ParseJson();
                 Console.WriteLine(geocode.GetFormattedAddress());
                 geocode.GetLocationFromJson();
-                Console.WriteLine("Latitude " + geocode.Location["Lat"]);
-                Console.WriteLine("Longitude " + geocode.Location["Lon"]);
-                geocode.OpenMap();
+
+                if (geocode.isGoodRequest){
+                    Console.WriteLine("Latitude " + geocode.Location["Lat"]);
+                    Console.WriteLine("Longitude " + geocode.Location["Lon"]);
+                    geocode.OpenMap();
+                }
+
             }
            
         }
