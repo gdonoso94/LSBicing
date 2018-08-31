@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Text;
+using Newtonsoft.Json.Linq;
 
 namespace LSBicing
 {
@@ -25,28 +27,32 @@ namespace LSBicing
             //    Console.WriteLine(result);
             //}
 
-            var openUpMenu = new Menu();
-            var selector = openUpMenu.GetChoice();
-            Console.Clear();
+            //var openUpMenu = new Menu();
+            //var selector = openUpMenu.GetChoice();
+            //Console.Clear();
 
-            if (selector == 1)
-            {
-                Console.WriteLine("Insert your address: ");
-                var myAddress = Console.ReadLine();
-                var geocode = new Geocoding(myAddress);
-                geocode.GetJsonString();
-                geocode.ParseJson();
-                Console.WriteLine(geocode.GetFormattedAddress());
-                geocode.GetLocationFromJson();
+            //if (selector == 1)
+            //{
+            //    Console.WriteLine("Insert your address: ");
+            //    var myAddress = Console.ReadLine();
+            //    var geocode = new Geocoding(myAddress);
+            //    geocode.GetJsonString();
+            //    geocode.ParseJson();
+            //    Console.WriteLine(geocode.GetFormattedAddress());
+            //    geocode.GetLocationFromJson();
 
-                if (geocode.isGoodRequest){
-                    Console.WriteLine("Latitude " + geocode.Location["Lat"]);
-                    Console.WriteLine("Longitude " + geocode.Location["Lon"]);
-                    geocode.OpenMap();
-                }
+            //    if (geocode.isGoodRequest){
+            //        Console.WriteLine("Latitude " + geocode.Location["Lat"]);
+            //        Console.WriteLine("Longitude " + geocode.Location["Lon"]);
+            //        geocode.OpenMap();
+            //    }
 
-            }
-           
+            //}
+
+            Bicing bicing = new Bicing("ronda de sant pau 72");
+            bicing.GetDistanceMatrix();
+            Console.WriteLine(bicing.distanceMatrix);
+
         }
     }
 }
