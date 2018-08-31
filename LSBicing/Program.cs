@@ -28,6 +28,7 @@ namespace LSBicing
             var openUpMenu = new Menu();
             var selector = openUpMenu.GetChoice();
             Console.Clear();
+
             if (selector == 1)
             {
                 Console.WriteLine("Insert your address: ");
